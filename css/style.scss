@@ -1,0 +1,169 @@
+$purple: #af9fe6;
+
+$blue: #22577a;
+$darkgreen: #38a3a5;
+$maingreen: #57cc99;
+$green: #80ed99;
+$lightgreen: #c7f9cc;
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: $blue;
+}
+
+.hidden {
+  opacity: 0;
+  max-height: 0;
+  transition: max-height ease-out 0.5s, opacity ease 1s 0.2s;
+}
+
+header {
+  text-align: center;
+  box-shadow: 0px 1px 1px $darkgreen;
+
+  img {
+    height: 5rem;
+    padding: 1rem 0;
+  }
+}
+
+.top-shelf {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hamburger {
+  cursor: pointer;
+  width: 2rem;
+  height: 2rem;
+  position: relative;
+
+  &::before {
+    content: "";
+    top: 0;
+    background-color: $darkgreen;
+    width: 2rem;
+    height: 0.3rem;
+    border-radius: 0.2rem;
+    position: absolute;
+    left: 0;
+    transform-origin: 0 0;
+    transition: transform ease-in-out 0.5s;
+  }
+
+  &__middle {
+    top: 0.83rem;
+    background-color: $darkgreen;
+    width: 2rem;
+    height: 0.3rem;
+    border-radius: 0.2rem;
+    position: absolute;
+    left: 0;
+    transition: width ease-in-out 0.5s;
+  }
+
+  &::after {
+    content: "";
+    bottom: 0;
+    background-color: $darkgreen;
+    width: 2rem;
+    height: 0.3rem;
+    border-radius: 0.2rem;
+    position: absolute;
+    left: 0;
+    transform-origin: 0 100%;
+    transition: transform ease-in-out 0.5s;
+  }
+}
+//----------------- hamburger to X -----------
+.hamburger.open {
+  &::before {
+    transform: rotate(45deg) scaleX(1.25);
+    transition: transform ease-in-out 0.5s;
+  }
+  .hamburger__middle {
+    width: 0;
+    transition: width ease-in-out 0.5s;
+  }
+  &::after {
+    transform: rotate(-45deg) scaleX(1.25); //translateY(0.025rem)
+    transition: transform ease-in-out 0.5s;
+  }
+}
+
+nav {
+  opacity: 1;
+  transition: max-height ease-in 0.5s;
+  max-height: 20rem;
+  overflow: hidden;
+
+  a {
+    display: block;
+    padding: 0.5rem;
+  }
+}
+
+.container {
+  padding: 0 1.5rem;
+}
+
+form {
+  margin: 1rem 0;
+  .control {
+    &:not(:last-child) {
+      margin-bottom: 1.8rem;
+    }
+  }
+
+  input {
+    width: 100%;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 0.025rem solid $blue;
+
+    &::placeholder {
+      opacity: 0.5;
+      font-size: 0.7rem;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .btn {
+    background-color: $darkgreen;
+    border: 0.05rem solid $darkgreen;
+    padding: 0.5rem 2rem;
+    border-radius: 1.5rem;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 400;
+  }
+}
+
+@media (min-width: 60rem) {
+  .container {
+    max-width: 50rem;
+    margin: 0 auto;
+  }
+
+  header {
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  .navigation.hidden {
+    opacity: 1;
+    max-height: inherit;
+    display: flex;
+  }
+}
