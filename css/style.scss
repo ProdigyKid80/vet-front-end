@@ -19,7 +19,7 @@ body {
 
 header {
   text-align: center;
-  box-shadow: 0px 1px 1px $darkgreen;
+  box-shadow: 0 0.02rem 0.02rem $darkgreen;
 
   img {
     height: 5rem;
@@ -101,6 +101,8 @@ nav {
   a {
     display: block;
     padding: 0.5rem;
+    text-decoration: none;
+    color: $darkgreen;
   }
 }
 
@@ -131,21 +133,73 @@ form {
       outline: none;
     }
   }
+}
 
-  .btn {
-    background-color: $darkgreen;
-    border: 0.05rem solid $darkgreen;
-    padding: 0.5rem 2rem;
-    border-radius: 1.5rem;
+.btn {
+  background-color: $darkgreen;
+  border: 0.05rem solid $darkgreen;
+  padding: 0.5rem 2rem;
+  border-radius: 1.5rem;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 400;
+  cursor: pointer;
+  font-size: 0.8rem;
+  margin-bottom: 0.5rem;
+
+  &:hover {
     color: #fff;
-    text-transform: uppercase;
-    font-weight: 400;
+    background-color: $blue;
+    border-color: $blue;
   }
+
+  &-light {
+    color: $darkgreen;
+    background-color: #fff;
+  }
+
+  &-l {
+    font-size: 1rem;
+  }
+
+  &-inactive {
+    i {
+      display: none;
+    }
+  }
+}
+
+.c-header {
+  margin-bottom: 3rem;
+}
+
+.cards {
+  margin-bottom: 2rem;
+
+  .card {
+    border: 0.02rem solid $blue;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 1rem 1rem;
+    border-radius: 2rem;
+    margin-bottom: 2rem;
+    color: $blue;
+
+    h4 {
+      font-size: 1.5rem;
+      margin: 0.5rem;
+    }
+  }
+}
+
+footer {
+  text-align: center;
+  color: $blue;
 }
 
 @media (min-width: 60rem) {
   .container {
-    max-width: 50rem;
+    max-width: 60rem;
     margin: 0 auto;
   }
 
@@ -165,5 +219,16 @@ form {
     opacity: 1;
     max-height: inherit;
     display: flex;
+  }
+
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: space-between;
+
+    .card {
+      width: calc(33.33% - 2rem);
+    }
   }
 }
