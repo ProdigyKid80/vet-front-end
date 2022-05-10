@@ -33,7 +33,7 @@
         </div>
       </div>
       <nav class="navigation hidden">
-        <a href="#">Pets</a>
+        <a href="/dashboard.html">Pets</a>
         <a href="/change.html">Change Password</a>
         <a id="logout" href="./index.html">Log out</a>
       </nav>
@@ -41,67 +41,34 @@
   </header>
  <main>
    <div class="container">
-     <div class="c-header">
-       <h1>Pet List</h1>
-       <button class="btn btn-l">Add pet</button>
-     </div>
-     <div class="cards">
-      <div class="card">
-        <h4>Levis</h4>
-        <div class="content">
-          <p>2001-12-25</p>
-          <p>email@email.lt</p>
-        </div>
-        <div class="actions">
-         <button class="btn">View log</button>
-         <button class="btn btn-light">Delete</button>
-        </div>
-      </div>
-      <div class="card">
-        <h4>Levis</h4>
-        <div class="content">
-          <p>2001-12-25</p>
-          <p>email@email.lt</p>
-        </div>
-        <div class="actions">
-         <button class="btn">View log</button>
-         <button class="btn btn-light">Delete</button>
-        </div>
-      </div>
-      <div class="card">
-        <h4>Levis</h4>
-        <div class="content">
-          <p>2001-12-25</p>
-          <p>email@email.lt</p>
-        </div>
-        <div class="actions">
-         <button class="btn">View log</button>
-         <button class="btn btn-light">Delete</button>
-        </div>
-      </div>
-      <div class="card">
-        <h4>Levis</h4>
-        <div class="content">
-          <p>2001-12-25</p>
-          <p>email@email.lt</p>
-        </div>
-        <div class="actions">
-         <button class="btn">View log</button>
-         <button class="btn btn-light">Delete</button>
-        </div>
-      </div>
-     </div>
+     <h1>Change password</h1>
+     <form name="changePassword">
 
+      <div class="control">
+        <label for="oldPass">Old password</label>
+        <input id="oldPass" type="password" placeholder="old password" required>
+      </div>
+
+      <div class="control">
+        <label for="newPass">New password</label>
+        <input id="newPass" type="password" placeholder="new password" required>
+      </div>
+
+      <div class="control">
+        <button class="btn btn-l" type="submit">Change password</button>
+      </div>
+     </form>
    </div>
  </main>
   
- <footer>
-   <div class="container">
+<footer>
+  <div class="container">
 
-     <p>Copyright &copy; Meow 2022. All rights reserved.</p>
-   </div>
- </footer>
-  
+    <p>Copyright &copy; Meow 2022. All rights reserved.</p>
+  </div>
+</footer>
+
   <script src="/assets/scripts/hamburger.js"></script>
+  <script src="/assets/scripts/change.js"></script>
 </body>
 </html>

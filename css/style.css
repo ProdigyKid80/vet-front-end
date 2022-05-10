@@ -125,6 +125,10 @@ nav a {
   color: #38a3a5;
 }
 
+nav #logout {
+  color: #ff3a3a;
+}
+
 .container {
   padding: 0 1.5rem;
 }

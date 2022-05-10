@@ -72,59 +72,8 @@ const signinFunc = async (userData) => {
   }
 };
 
-// const nums = [-1, 0, 1, 2, -1, -4];
-// const output = [];
-
-// const findTriplets = (arr) => {
-//   for (i = 0; i < arr.length; i++) {
-//     const a = arr[i];
-
-//     for (j = i + 1; j < arr.length; j++) {
-//       const b = arr[j];
-
-//       for (k = j + 1; k < arr.length; k++) {
-//         const c = arr[k];
-
-//         if (a + b + c === 0) {
-//           const numVar = [a, b, c].sort();
-//           output.push(numVar);
-//         }
-//       }
-//     }
-//   }
-
-//   // for (l = 0; l < arr.length; l++) {
-//   //   for (m = 0; m < 3; m++) {}
-//   // }
-
-//   // const uniq = [...new Set(output)];
-//   console.log(output);
-// };
-
-// findTriplets(nums);
-
-// const heights = [1, 8, 6, 2, 5, 4, 8, 3, 7];
-// // const keys = Object.keys(heights);
-// let water = [];
-// let plotas = 0;
-
-// const maxWater = (arr) => {
-//   for (i = 0; i < arr.length; i++) {
-//     for (j = i + 1; j < arr.length; j++) {
-//       if (arr[i] >= arr[j]) {
-//         plotas = arr[j] * (j - i);
-//       } else {
-//         plotas = arr[i] * (j - i);
-//       }
-//       water.push(plotas);
-//     }
-//   }
-
-//   console.log(water);
-
-//   console.log(Math.max(...water));
-
-//   return Math.max(...water);
-// };
-
-// maxWater(heights);
+//---------- LOG OUT -------------
+document.getElementById("logout").addEventListener("click", () => {
+  localStorage.removeItem("token");
+  location.replace("/index.html");
+});
