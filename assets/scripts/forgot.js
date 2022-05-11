@@ -4,7 +4,9 @@ const restorePassword = document.forms.restorePassword;
 restorePassword.addEventListener("submit", (e) => {
   e.preventDefault();
 
-  sendRandomPass(restorePassword.email.value.toLowerCase().trim());
+  const email = restorePassword.email.value.toLowerCase().trim();
+
+  sendRandomPass({ email });
 });
 
 const sendRandomPass = async (email) => {
@@ -17,7 +19,8 @@ const sendRandomPass = async (email) => {
       body: JSON.stringify(email),
     });
     const data = await res.json();
-    console.log(data);
+    alert(data.msg);
+    return location.replace("/index.html");
   } catch (err) {
     alert(err);
   }
