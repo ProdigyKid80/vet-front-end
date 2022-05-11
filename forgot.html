@@ -23,20 +23,9 @@
   <body>
   <header>
     <div class="container">
-
       <div class="top-shelf">
-  
         <a href="/index.html"><img src="/assets/images/logo_green.png" alt="meow"></a>
-        
-        <div class="hamburger">
-          <span class="hamburger__middle"></span>
-        </div>
       </div>
-      <nav class="navigation hidden">
-        <a href="/dashboard.html">Pets</a>
-        <a href="/change.html">Change Password</a>
-        <a id="logout" href="./index.html">Log out</a>
-      </nav>
     </div>
   </header>
  <main>
@@ -47,7 +36,7 @@
 
        <div class="control">
          <label for="email">Email</label>
-         <input type="email" placeholder="example@email.com" required>
+         <input id="email" type="email" placeholder="example@email.com" required>
        </div>
 
        <div class="control">
@@ -57,13 +46,14 @@
    </div>
  </main>
   
-<footer>
-  <div class="container">
+  <footer>
+    <div class="container">
 
-    <p>Copyright &copy; Meow 2022. All rights reserved.</p>
-  </div>
-</footer>
+      <p>Copyright &copy; Meow 2022. All rights reserved.</p>
+    </div>
+  </footer>
 
   <script src="/assets/scripts/hamburger.js"></script>
+  <script src="/assets/scripts/forgot.js"></script>
 </body>
 </html>
