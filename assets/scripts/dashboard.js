@@ -65,3 +65,8 @@ const displayPets = (data) => {
     actions.appendChild(deleteBtn);
   });
 };
+
+//---------- ADD PET -------------
+document.getElementById("addPetBtn").addEventListener("click", () => {
+  location = "add.html";
+});

@@ -1,27 +1,26 @@
-const url = "http://localhost:8080/v1/users";
-const changePassForm = document.forms.changePassword;
+const url = "http://localhost:8080/v1/pets";
+
 const token = localStorage.getItem("token");
 
-changePassForm.addEventListener("submit", (e) => {
+document.forms.addPet.addEventListener("submit", (e) => {
   e.preventDefault();
 
-  const passData = {
-    oldPass: changePassword.oldPass.value,
-    newPass: changePassword.newPass.value,
-  };
+  const name = addPet.name.value.trim();
+  const birthday = addPet.birthday.value;
+  const email = addPet.email.value.trim();
 
-  changePass(passData);
+  postPet({ name, birthday, email });
 });
 
-const changePass = async (passData) => {
+const postPet = async (petData) => {
   try {
-    const res = await fetch(`${url}/update`, {
+    const res = await fetch(`${url}`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
         authorization: `Bearer ${token}`,
       },
-      body: JSON.stringify(passData),
+      body: JSON.stringify(petData),
     });
     const data = await res.json();
 
@@ -30,7 +29,6 @@ const changePass = async (passData) => {
     }
 
     alert(data.msg);
-
     location.replace("/dashboard.html");
   } catch (err) {
     alert(err);

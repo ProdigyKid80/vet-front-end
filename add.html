@@ -33,7 +33,7 @@
         </div>
       </div>
       <nav class="navigation hidden">
-        <a href="/dashboard.html">Pets</a>
+        <a href="#">Pets</a>
         <a href="/change.html">Change Password</a>
         <a id="logout" href="./index.html">Log out</a>
       </nav>
@@ -41,35 +41,39 @@
   </header>
  <main>
    <div class="container">
-     <h1>Change password</h1>
-     <form name="changePassword">
+      <h1>Add a Pet</h1>
+      <form name="addPet">
+        <div class="control">
+          <label for="name">Pet name</label>
+          <input type="text" id="name" placeholder="Pukis" required>
+        </div>
+ 
+        <div class="control">
+          <label for="birthday">Pet Birth Date</label>
+          <input type="date" id="birthday" required>
+        </div>
 
-      <div class="control">
-        <label for="oldPass">Old password</label>
-        <input id="oldPass" type="password" placeholder="old password" required>
-      </div>
-
-      <div class="control">
-        <label for="newPass">New password</label>
-        <input id="newPass" type="password" placeholder="new password" required>
-      </div>
-
-      <div class="control">
-        <button class="btn btn-l" type="submit">Change password</button>
-      </div>
-     </form>
+        <div class="control">
+          <label for="email">Your email</label>
+          <input type="email" id="email" placeholder="email@example.com" required>
+        </div>
+ 
+        <div class="control">
+          <button class="btn btn-l" type="submit">Add pet</button>
+        </div>
+      </form>
    </div>
  </main>
   
-<footer>
-  <div class="container">
+ <footer>
+   <div class="container">
 
-    <p>Copyright &copy; Meow 2022. All rights reserved.</p>
-  </div>
-</footer>
-
+     <p>Copyright &copy; Meow 2022. All rights reserved.</p>
+   </div>
+ </footer>
+  
   <script src="/assets/scripts/hamburger.js"></script>
   <script src="/assets/scripts/logout.js"></script>
-  <script src="/assets/scripts/change.js"></script>
+  <script src="/assets/scripts/add.js"></script>
 </body>
 </html>
