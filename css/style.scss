@@ -1,5 +1,4 @@
 $gray: #b3b3b3;
-$red: #ff3a3a;
 $blue: #22577a;
 $darkgreen: #38a3a5;
 
@@ -86,7 +85,7 @@ header {
     width: 0;
   }
   &::after {
-    transform: rotate(-45deg) scaleX(1.25);
+    transform: rotate(-45deg) scaleX(1.25); //translateY(0.025rem)
     transition: transform ease-in-out 0.5s;
   }
 }
@@ -105,7 +104,7 @@ nav {
   }
 
   #logout {
-    color: $red;
+    color: #ff3a3a;
   }
 }
 
@@ -122,8 +121,8 @@ form {
   }
 
   input {
-    border-bottom: 0.025rem solid $blue;
     border: none;
+    border-bottom: 0.025rem solid $blue;
     box-sizing: border-box;
     width: 100%;
 

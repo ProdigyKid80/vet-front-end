@@ -144,8 +144,8 @@ form .control:not(:last-child) {
 }
 
 form input {
-  border-bottom: 0.025rem solid #22577a;
   border: none;
+  border-bottom: 0.025rem solid #22577a;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 100%;
