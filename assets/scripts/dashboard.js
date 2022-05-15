@@ -64,6 +64,9 @@ const displayPets = (data) => {
     deleteBtn.classList.add("btn", "btn-light");
     deleteBtn.textContent = "Delete";
     actions.appendChild(deleteBtn);
+    deleteBtn.addEventListener("click", () => {
+      deletePet(pet.id);
+    });
   });
 };
 
@@ -71,3 +74,21 @@ const displayPets = (data) => {
 document.getElementById("addPetBtn").addEventListener("click", () => {
   location = "add-pet.html";
 });
+
+//-------------DELETE PET---------------
+const deletePet = async (id) => {
+  try {
+    const res = await fetch(`${url}/${id}`, {
+      method: "DELETE",
+      headers: {
+        authorization: `Bearer ${token}`,
+      },
+    });
+    const data = await res.json();
+
+    alert(data.msg);
+    location.reload();
+  } catch (err) {
+    alert(err);
+  }
+};
