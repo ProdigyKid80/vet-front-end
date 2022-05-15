@@ -10,6 +10,8 @@ $lightgreen: #c7f9cc;
 body {
   font-family: "Poppins", sans-serif;
   color: $blue;
+  min-height: 100vh;
+  position: relative;
 }
 
 .hidden {
@@ -207,9 +209,17 @@ form {
   }
 }
 
+main {
+  padding-bottom: 4.5rem;
+}
+
 footer {
   text-align: center;
   color: $blue;
+  position: absolute;
+  bottom: 0;
+  height: 4.5rem;
+  width: 100%;
 }
 
 @media (min-width: 60rem) {

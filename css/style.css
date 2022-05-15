@@ -1,6 +1,8 @@
 body {
   font-family: "Poppins", sans-serif;
   color: #22577a;
+  min-height: 100vh;
+  position: relative;
 }
 
 .hidden {
@@ -239,9 +241,17 @@ form input:focus {
   margin: 0.5rem;
 }
 
+main {
+  padding-bottom: 4.5rem;
+}
+
 footer {
   text-align: center;
   color: #22577a;
+  position: absolute;
+  bottom: 0;
+  height: 4.5rem;
+  width: 100%;
 }
 
 @media (min-width: 60rem) {
