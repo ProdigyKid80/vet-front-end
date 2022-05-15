@@ -28,8 +28,6 @@ const displayPets = (data) => {
   petsContainer.innerHTML = "";
 
   data.forEach((pet) => {
-    let date = new Date(pet.birthday);
-
     const div = document.createElement("div");
     div.classList.add("card");
     petsContainer.appendChild(div);
@@ -43,7 +41,7 @@ const displayPets = (data) => {
     div.appendChild(content);
 
     const birthday = document.createElement("p");
-    birthday.innerText = `${date.getFullYear()}-${date.getMonth()}-${date.getDate()}`;
+    birthday.innerText = new Date(pet.birthday).toLocaleDateString("en-CA");
     content.appendChild(birthday);
 
     const email = document.createElement("p");
