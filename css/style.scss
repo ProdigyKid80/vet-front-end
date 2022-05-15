@@ -1,28 +1,24 @@
-$purple: #af9fe6;
 $gray: #b3b3b3;
-
+$red: #ff3a3a;
 $blue: #22577a;
 $darkgreen: #38a3a5;
-$maingreen: #57cc99;
-$green: #80ed99;
-$lightgreen: #c7f9cc;
 
 body {
-  font-family: "Poppins", sans-serif;
   color: $blue;
+  font-family: "Poppins", sans-serif;
   min-height: 100vh;
   position: relative;
 }
 
 .hidden {
-  opacity: 0;
   max-height: 0;
+  opacity: 0;
   transition: max-height ease-out 0.5s, opacity ease 1s 0.2s;
 }
 
 header {
-  text-align: center;
   box-shadow: 0 0.02rem 0.02rem $darkgreen;
+  text-align: center;
 
   img {
     height: 5rem;
@@ -31,52 +27,52 @@ header {
 }
 
 .top-shelf {
+  align-items: center;
   display: flex;
   justify-content: space-between;
-  align-items: center;
 }
 
 .hamburger {
   cursor: pointer;
-  width: 2rem;
   height: 2rem;
   position: relative;
+  width: 2rem;
 
   &::before {
-    content: "";
-    top: 0;
     background-color: $darkgreen;
-    width: 2rem;
-    height: 0.3rem;
     border-radius: 0.2rem;
-    position: absolute;
+    content: "";
+    height: 0.3rem;
     left: 0;
+    position: absolute;
+    top: 0;
     transform-origin: 0 0;
     transition: transform ease-in-out 0.5s;
+    width: 2rem;
   }
 
   &__middle {
-    top: 0.83rem;
     background-color: $darkgreen;
-    width: 2rem;
-    height: 0.3rem;
     border-radius: 0.2rem;
-    position: absolute;
+    height: 0.3rem;
     left: 0;
+    position: absolute;
+    top: 0.83rem;
     transition: width ease-in-out 0.5s;
+    width: 2rem;
   }
 
   &::after {
-    content: "";
-    bottom: 0;
     background-color: $darkgreen;
-    width: 2rem;
-    height: 0.3rem;
     border-radius: 0.2rem;
-    position: absolute;
+    bottom: 0;
+    content: "";
+    height: 0.3rem;
     left: 0;
+    position: absolute;
     transform-origin: 0 100%;
     transition: transform ease-in-out 0.5s;
+    width: 2rem;
   }
 }
 //----------------- hamburger to X -----------
@@ -86,30 +82,30 @@ header {
     transition: transform ease-in-out 0.5s;
   }
   .hamburger__middle {
-    width: 0;
     transition: width ease-in-out 0.5s;
+    width: 0;
   }
   &::after {
-    transform: rotate(-45deg) scaleX(1.25); //translateY(0.025rem)
+    transform: rotate(-45deg) scaleX(1.25);
     transition: transform ease-in-out 0.5s;
   }
 }
 
 nav {
-  opacity: 1;
-  transition: max-height ease-in 0.5s;
   max-height: 20rem;
+  opacity: 1;
   overflow: hidden;
+  transition: max-height ease-in 0.5s;
 
   a {
+    color: $darkgreen;
     display: block;
     padding: 0.5rem;
     text-decoration: none;
-    color: $darkgreen;
   }
 
   #logout {
-    color: #ff3a3a;
+    color: $red;
   }
 }
 
@@ -126,14 +122,14 @@ form {
   }
 
   input {
-    width: 100%;
-    box-sizing: border-box;
-    border: none;
     border-bottom: 0.025rem solid $blue;
+    border: none;
+    box-sizing: border-box;
+    width: 100%;
 
     &::placeholder {
-      opacity: 0.5;
       font-size: 0.7rem;
+      opacity: 0.5;
     }
 
     &:focus {
@@ -144,25 +140,25 @@ form {
 
 .btn {
   background-color: $darkgreen;
-  border: 0.05rem solid $darkgreen;
-  padding: 0.5rem 2rem;
   border-radius: 1.5rem;
+  border: 0.05rem solid $darkgreen;
   color: #fff;
-  text-transform: uppercase;
-  font-weight: 400;
   cursor: pointer;
   font-size: 0.8rem;
+  font-weight: 400;
   margin: 0.5rem 0.25rem;
+  padding: 0.5rem 2rem;
+  text-transform: uppercase;
 
   &:hover {
-    color: #fff;
     background-color: $blue;
     border-color: $blue;
+    color: #fff;
   }
 
   &-light {
-    color: $darkgreen;
     background-color: #fff;
+    color: $darkgreen;
   }
 
   &-l {
@@ -194,13 +190,13 @@ form {
   margin-bottom: 2rem;
 
   .card {
+    border-radius: 2rem;
     border: 0.02rem solid $blue;
     box-sizing: border-box;
-    text-align: center;
-    padding: 1rem 1rem;
-    border-radius: 2rem;
-    margin-bottom: 2rem;
     color: $blue;
+    margin-bottom: 2rem;
+    padding: 1rem 1rem;
+    text-align: center;
 
     h4 {
       font-size: 1.5rem;
@@ -214,25 +210,25 @@ main {
 }
 
 footer {
-  text-align: center;
-  color: $blue;
-  position: absolute;
   bottom: 0;
+  color: $blue;
   height: 4.5rem;
+  position: absolute;
+  text-align: center;
   width: 100%;
 }
 
 @media (min-width: 60rem) {
   .container {
-    max-width: 60rem;
     margin: 0 auto;
+    max-width: 60rem;
   }
 
   header {
     .container {
+      align-items: center;
       display: flex;
       justify-content: space-between;
-      align-items: center;
     }
   }
 
@@ -241,9 +237,9 @@ footer {
   }
 
   .navigation.hidden {
-    opacity: 1;
-    max-height: inherit;
     display: flex;
+    max-height: inherit;
+    opacity: 1;
   }
 
   .cards {

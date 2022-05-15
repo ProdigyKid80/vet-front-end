@@ -1,21 +1,21 @@
 body {
-  font-family: "Poppins", sans-serif;
   color: #22577a;
+  font-family: "Poppins", sans-serif;
   min-height: 100vh;
   position: relative;
 }
 
 .hidden {
-  opacity: 0;
   max-height: 0;
+  opacity: 0;
   -webkit-transition: max-height ease-out 0.5s, opacity ease 1s 0.2s;
   transition: max-height ease-out 0.5s, opacity ease 1s 0.2s;
 }
 
 header {
-  text-align: center;
   -webkit-box-shadow: 0 0.02rem 0.02rem #38a3a5;
           box-shadow: 0 0.02rem 0.02rem #38a3a5;
+  text-align: center;
 }
 
 header img {
@@ -24,68 +24,68 @@ header img {
 }
 
 .top-shelf {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .hamburger {
   cursor: pointer;
-  width: 2rem;
   height: 2rem;
   position: relative;
+  width: 2rem;
 }
 
 .hamburger::before {
-  content: "";
-  top: 0;
   background-color: #38a3a5;
-  width: 2rem;
-  height: 0.3rem;
   border-radius: 0.2rem;
-  position: absolute;
+  content: "";
+  height: 0.3rem;
   left: 0;
+  position: absolute;
+  top: 0;
   -webkit-transform-origin: 0 0;
           transform-origin: 0 0;
   -webkit-transition: -webkit-transform ease-in-out 0.5s;
   transition: -webkit-transform ease-in-out 0.5s;
   transition: transform ease-in-out 0.5s;
   transition: transform ease-in-out 0.5s, -webkit-transform ease-in-out 0.5s;
+  width: 2rem;
 }
 
 .hamburger__middle {
-  top: 0.83rem;
   background-color: #38a3a5;
-  width: 2rem;
-  height: 0.3rem;
   border-radius: 0.2rem;
-  position: absolute;
+  height: 0.3rem;
   left: 0;
+  position: absolute;
+  top: 0.83rem;
   -webkit-transition: width ease-in-out 0.5s;
   transition: width ease-in-out 0.5s;
+  width: 2rem;
 }
 
 .hamburger::after {
-  content: "";
-  bottom: 0;
   background-color: #38a3a5;
-  width: 2rem;
-  height: 0.3rem;
   border-radius: 0.2rem;
-  position: absolute;
+  bottom: 0;
+  content: "";
+  height: 0.3rem;
   left: 0;
+  position: absolute;
   -webkit-transform-origin: 0 100%;
           transform-origin: 0 100%;
   -webkit-transition: -webkit-transform ease-in-out 0.5s;
   transition: -webkit-transform ease-in-out 0.5s;
   transition: transform ease-in-out 0.5s;
   transition: transform ease-in-out 0.5s, -webkit-transform ease-in-out 0.5s;
+  width: 2rem;
 }
 
 .hamburger.open::before {
@@ -98,9 +98,9 @@ header img {
 }
 
 .hamburger.open .hamburger__middle {
-  width: 0;
   -webkit-transition: width ease-in-out 0.5s;
   transition: width ease-in-out 0.5s;
+  width: 0;
 }
 
 .hamburger.open::after {
@@ -113,18 +113,18 @@ header img {
 }
 
 nav {
+  max-height: 20rem;
   opacity: 1;
+  overflow: hidden;
   -webkit-transition: max-height ease-in 0.5s;
   transition: max-height ease-in 0.5s;
-  max-height: 20rem;
-  overflow: hidden;
 }
 
 nav a {
+  color: #38a3a5;
   display: block;
   padding: 0.5rem;
   text-decoration: none;
-  color: #38a3a5;
 }
 
 nav #logout {
@@ -144,31 +144,31 @@ form .control:not(:last-child) {
 }
 
 form input {
-  width: 100%;
+  border-bottom: 0.025rem solid #22577a;
+  border: none;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  border: none;
-  border-bottom: 0.025rem solid #22577a;
+  width: 100%;
 }
 
 form input::-webkit-input-placeholder {
-  opacity: 0.5;
   font-size: 0.7rem;
+  opacity: 0.5;
 }
 
 form input:-ms-input-placeholder {
-  opacity: 0.5;
   font-size: 0.7rem;
+  opacity: 0.5;
 }
 
 form input::-ms-input-placeholder {
-  opacity: 0.5;
   font-size: 0.7rem;
+  opacity: 0.5;
 }
 
 form input::placeholder {
-  opacity: 0.5;
   font-size: 0.7rem;
+  opacity: 0.5;
 }
 
 form input:focus {
@@ -177,26 +177,26 @@ form input:focus {
 
 .btn {
   background-color: #38a3a5;
-  border: 0.05rem solid #38a3a5;
-  padding: 0.5rem 2rem;
   border-radius: 1.5rem;
+  border: 0.05rem solid #38a3a5;
   color: #fff;
-  text-transform: uppercase;
-  font-weight: 400;
   cursor: pointer;
   font-size: 0.8rem;
+  font-weight: 400;
   margin: 0.5rem 0.25rem;
+  padding: 0.5rem 2rem;
+  text-transform: uppercase;
 }
 
 .btn:hover {
-  color: #fff;
   background-color: #22577a;
   border-color: #22577a;
+  color: #fff;
 }
 
 .btn-light {
-  color: #38a3a5;
   background-color: #fff;
+  color: #38a3a5;
 }
 
 .btn-l {
@@ -226,14 +226,14 @@ form input:focus {
 }
 
 .cards .card {
+  border-radius: 2rem;
   border: 0.02rem solid #22577a;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  text-align: center;
-  padding: 1rem 1rem;
-  border-radius: 2rem;
-  margin-bottom: 2rem;
   color: #22577a;
+  margin-bottom: 2rem;
+  padding: 1rem 1rem;
+  text-align: center;
 }
 
 .cards .card h4 {
@@ -246,39 +246,39 @@ main {
 }
 
 footer {
-  text-align: center;
-  color: #22577a;
-  position: absolute;
   bottom: 0;
+  color: #22577a;
   height: 4.5rem;
+  position: absolute;
+  text-align: center;
   width: 100%;
 }
 
 @media (min-width: 60rem) {
   .container {
-    max-width: 60rem;
     margin: 0 auto;
+    max-width: 60rem;
   }
   header .container {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
   }
   .hamburger {
     display: none;
   }
   .navigation.hidden {
-    opacity: 1;
-    max-height: inherit;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    max-height: inherit;
+    opacity: 1;
   }
   .cards {
     display: -webkit-box;
