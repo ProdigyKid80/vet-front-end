@@ -69,5 +69,5 @@ const displayPets = (data) => {
 
 //---------- ADD PET -------------
 document.getElementById("addPetBtn").addEventListener("click", () => {
-  location = "add.html";
+  location = "add-pet.html";
 });

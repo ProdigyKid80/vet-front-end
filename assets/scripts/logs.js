@@ -19,7 +19,8 @@ const getData = async (url) => {
     if (data.length > 0) {
       displayLogs(data);
     } else {
-      alert("Oops! Something's wrong");
+      logsContainer.innerText = "No data found.";
+      nameHeader.innerText = "No data found.";
     }
   } catch (err) {
     alert(err);
@@ -54,6 +55,11 @@ const displayLogs = (data) => {
     content.appendChild(description);
   });
 };
+
+//-----------------------ADD LOG---------------------
+document.getElementById("addLog").addEventListener("click", () => {
+  location = `/add-log.html?pet_id=${petId}`;
+});
 
 //-----------------------FILTERS---------------------
 

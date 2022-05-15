@@ -35,27 +35,33 @@
       <nav class="navigation hidden">
         <a href="/dashboard.html">Pets</a>
         <a href="/change.html">Change Password</a>
-        <a id="logout" href="./index.html">Log out</a>
+        <a id="logout" href="/index.html">Log out</a>
       </nav>
     </div>
   </header>
  <main>
    <div class="container">
-     <div class="c-header">
-       <h1>Loading . . .</h1>
-       <button class="btn btn-l" id="addLog">Add log</button>
-       <button class="btn btn-l btn-disabled">Add prescription</button>
-     </div>
-     <div class="c-header">
-       <p>Display:</p>
-      <button class="btn" id="logFilter">Logs <i class="fas fa-check"></i></button>
-      <button class="btn btn-disabled btn-inactive" id="prescFilter">Prescriptions <i class="fas fa-check"></i></button>
-    </div>
-     <div class="cards">
-      Loading . . .
-      </div>
-     </div>
+      <h1>Add log</h1>
+      <form name="addLog">
+        <div class="control">
+          <label for="title">Title</label>
+          <input type="text" id="title" placeholder="Title" required>
+        </div>
+ 
+        <div class="control">
+          <label for="date">Date</label>
+          <input type="date" id="date" required>
+        </div>
 
+        <div class="control">
+          <label for="description">Description</label>
+          <input type="textarea" id="description" placeholder="description" required>
+        </div>
+ 
+        <div class="control">
+          <button class="btn btn-l" type="submit">Add log</button>
+        </div>
+      </form>
    </div>
  </main>
   
@@ -68,6 +74,6 @@
   
   <script src="/assets/scripts/hamburger.js"></script>
   <script src="/assets/scripts/logout.js"></script>
-  <script src="/assets/scripts/logs.js"></script>
+  <script src="/assets/scripts/add-log.js"></script>
 </body>
 </html>
