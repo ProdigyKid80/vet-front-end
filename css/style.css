@@ -205,6 +205,16 @@ form input:focus {
   display: none;
 }
 
+.btn-disabled {
+  background-color: #b3b3b3;
+  border-color: #b3b3b3;
+}
+
+.btn-disabled:hover {
+  background-color: #b3b3b3;
+  border-color: #b3b3b3;
+}
+
 .c-header {
   margin-bottom: 3rem;
 }

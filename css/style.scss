@@ -1,4 +1,5 @@
 $purple: #af9fe6;
+$gray: #b3b3b3;
 
 $blue: #22577a;
 $darkgreen: #38a3a5;
@@ -169,6 +170,16 @@ form {
   &-inactive {
     i {
       display: none;
+    }
+  }
+
+  &-disabled {
+    background-color: $gray;
+    border-color: $gray;
+
+    &:hover {
+      background-color: $gray;
+      border-color: $gray;
     }
   }
 }

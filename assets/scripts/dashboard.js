@@ -56,6 +56,9 @@ const displayPets = (data) => {
     viewBtn.classList.add("btn");
     viewBtn.textContent = "View log";
     actions.appendChild(viewBtn);
+    viewBtn.addEventListener("click", () => {
+      location = `logs.html?pet_id=${pet.id}`;
+    });
 
     const deleteBtn = document.createElement("button");
     deleteBtn.classList.add("btn", "btn-light");
