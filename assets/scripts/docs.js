@@ -63,11 +63,6 @@ const getFile = async (filename) => {
   }
 };
 
-//-----------------------ADD DOC---------------------
-document.getElementById("addLog").addEventListener("click", () => {
-  location = `/add-log.html?pet_id=${petId}`;
-});
-
 //-----------------------FILTERS---------------------
 docBtn.addEventListener("click", () => {
   docBtn.classList.toggle("btn-inactive");
