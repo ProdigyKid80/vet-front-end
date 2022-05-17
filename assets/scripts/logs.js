@@ -3,7 +3,7 @@ const petId = location.search.split("=")[1];
 const logsContainer = document.querySelector(".cards");
 const nameHeader = document.querySelector("h1");
 
-const url = `http://localhost:8080/v1/logs/${petId}`;
+const url = `http://localhost:8080/v1`;
 
 const token = localStorage.getItem("token");
 
@@ -27,7 +27,7 @@ const getData = async (url) => {
   }
 };
 
-getData(url);
+getData(`${url}/logs/${petId}`);
 
 const displayLogs = (data) => {
   nameHeader.innerText = `${data[0].name}: Health Records`;

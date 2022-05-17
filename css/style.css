@@ -241,6 +241,19 @@ form input:focus {
   margin: 0.5rem;
 }
 
+#docs .card h4 {
+  cursor: pointer;
+}
+
+#docs .card h4 i {
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+#docs .card h4 span {
+  margin-left: 1rem;
+}
+
 main {
   padding-bottom: 4.5rem;
 }

@@ -204,6 +204,23 @@ form {
   }
 }
 
+#docs {
+  .card {
+    h4 {
+      cursor: pointer;
+
+      i {
+        font-size: 2rem;
+        cursor: pointer;
+      }
+
+      span {
+        margin-left: 1rem;
+      }
+    }
+  }
+}
+
 main {
   padding-bottom: 4.5rem;
 }
