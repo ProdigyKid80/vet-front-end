@@ -1,4 +1,5 @@
 const docsContainer = document.getElementById("docs");
+const docBtn = document.getElementById("docFilter");
 
 const getDocs = async (url) => {
   try {
@@ -65,4 +66,12 @@ const getFile = async (filename) => {
 //-----------------------ADD DOC---------------------
 document.getElementById("addLog").addEventListener("click", () => {
   location = `/add-log.html?pet_id=${petId}`;
+});
+
+//-----------------------FILTERS---------------------
+docBtn.addEventListener("click", () => {
+  docBtn.classList.toggle("btn-inactive");
+  docBtn.classList.toggle("btn-light");
+
+  document.getElementById("docs").classList.toggle("not-shown");
 });

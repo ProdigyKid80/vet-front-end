@@ -254,6 +254,10 @@ form input:focus {
   margin-left: 1rem;
 }
 
+.not-shown {
+  display: none !important;
+}
+
 main {
   padding-bottom: 4.5rem;
 }

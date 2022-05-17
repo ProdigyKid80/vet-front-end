@@ -1,4 +1,5 @@
 const petId = location.search.split("=")[1];
+const logBtn = document.getElementById("logFilter");
 
 const logsContainer = document.querySelector(".cards");
 const nameHeader = document.querySelector("h1");
@@ -62,7 +63,9 @@ document.getElementById("addLog").addEventListener("click", () => {
 });
 
 //-----------------------FILTERS---------------------
+logBtn.addEventListener("click", () => {
+  logBtn.classList.toggle("btn-inactive");
+  logBtn.classList.toggle("btn-light");
 
-// document.getElementById("logFilter").addEventListener("click", () => {
-//   document.getElementById("logFilter").classList.toggle("btn-inactive");
-// });
+  document.getElementById("logs").classList.toggle("not-shown");
+});
