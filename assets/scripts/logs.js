@@ -62,6 +62,10 @@ document.getElementById("addLog").addEventListener("click", () => {
   location = `/add-log.html?pet_id=${petId}`;
 });
 
+document.getElementById("addDoc").addEventListener("click", () => {
+  location = `/add-doc.html?pet_id=${petId}`;
+});
+
 //-----------------------FILTERS---------------------
 logBtn.addEventListener("click", () => {
   logBtn.classList.toggle("btn-inactive");

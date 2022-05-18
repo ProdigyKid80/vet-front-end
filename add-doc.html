@@ -35,43 +35,39 @@
       <nav class="navigation hidden">
         <a href="/dashboard.html">Pets</a>
         <a href="/change.html">Change Password</a>
-        <a id="logout" href="./index.html">Log out</a>
+        <a id="logout" href="/index.html">Log out</a>
       </nav>
     </div>
   </header>
  <main>
    <div class="container">
-     <div class="c-header">
-       <h1>Loading . . .</h1>
-       <button class="btn btn-l" id="addLog">Add log</button>
-       <button class="btn btn-l" id="addDoc">Add document (coming soon)</button>
-     </div>
-     <div class="c-header">
-       <p>Display:</p>
-      <button class="btn" id="logFilter">Logs <i class="fas fa-check"></i></button>
-      <button class="btn" id="docFilter">Documents <i class="fas fa-check"></i></button>
-    </div>
-     <div class="cards" id="logs">
-        Loading . . .
-     </div>
-     <div class="cards" id="docs">
-      Loading documents . . .
-   </div>
-
+      <h1>Add document</h1>
+      <form name="addDoc">
+        <!-- <div class="control">
+          <label for="title">File name</label>
+          <input type="text" id="title" placeholder="Title" required>
+        </div> -->
+ 
+        <div class="control">
+          <input type="file" id="file" required>
+        </div>
+ 
+        <div class="control">
+          <button class="btn btn-l" type="submit">Add document</button>
+        </div>
+      </form>
    </div>
  </main>
   
  <footer>
    <div class="container">
-
      <p>Copyright &copy; Meow 2022. All rights reserved.</p>
    </div>
  </footer>
   
 <script src="/assets/scripts/hamburger.js"></script>
 <script src="/assets/scripts/logout.js"></script>
-<script src="/assets/scripts/logs.js"></script>
-<script src="/assets/scripts/docs.js"></script>
+<script src="/assets/scripts/add-doc.js"></script>
 
 </body>
 </html>
