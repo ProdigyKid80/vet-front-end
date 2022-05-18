@@ -34,11 +34,8 @@ const displayDocs = (data) => {
     const icon = document.createElement("i");
     icon.classList.add("far", "fa-file-alt");
     title.appendChild(icon);
+    title.innerHTML += item.filename;
     div.appendChild(title);
-
-    const filename = document.createElement("span");
-    filename.innerText = item.filename;
-    title.appendChild(filename);
 
     title.addEventListener("click", () => getFile(item.filename));
   });

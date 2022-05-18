@@ -243,11 +243,12 @@ form input:focus {
 
 #docs .card h4 {
   cursor: pointer;
+  overflow-wrap: break-word;
 }
 
 #docs .card h4 i {
   font-size: 2rem;
-  cursor: pointer;
+  margin-right: 0.5rem;
 }
 
 #docs .card h4 span {

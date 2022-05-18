@@ -208,10 +208,11 @@ form {
   .card {
     h4 {
       cursor: pointer;
+      overflow-wrap: break-word;
 
       i {
         font-size: 2rem;
-        cursor: pointer;
+        margin-right: 0.5rem;
       }
 
       span {
